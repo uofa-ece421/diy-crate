@@ -17,10 +17,10 @@ pub struct Uart {
 }
 
 impl Uart {
-    pub fn open(devpath: &String) -> io::Result<Uart> {
+    pub fn open(devpath: &str) -> io::Result<Uart> {
         let fd = OpenOptions::new().read(true).write(true).open(devpath)?;
         Ok(Uart {
-            path: devpath.clone(),
+            path: devpath.to_string(),
             fd,
         })
     }
@@ -46,10 +46,10 @@ pub struct Spi {
 }
 
 impl Spi {
-    pub fn open(devpath: &String) -> io::Result<Spi> {
+    pub fn open(devpath: &str) -> io::Result<Spi> {
         let device = Spidev::open(devpath)?;
         Ok(Spi {
-            path: devpath.clone(),
+            path: devpath.to_string(),
             device,
         })
     }
