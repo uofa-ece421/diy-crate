@@ -1,6 +1,6 @@
 ECE 421 Student Submission License (Version 1.0)
 
-Copyright 2025 `student name`
+Copyright 2026 `student name`
 
 Unauthorized redistribution is forbidden in all circumstances. Use of this
 software without explicit authorization from the author **or** ECE 421
