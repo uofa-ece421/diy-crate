@@ -1,10 +1,9 @@
 use std::io;
+use std::io::{Read, Write};
 use std::os::fd::{AsFd, AsRawFd};
 use nix::unistd::{read, write};
 use std::fs::{File, OpenOptions};
 use spidev::Spidev;
-
-pub mod spidev;
 
 pub trait SendRecv {
     fn send(&mut self, data: &[u8]) -> io::Result<usize>;
